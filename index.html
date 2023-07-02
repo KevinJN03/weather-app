@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <script src="main.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/8de37b55b8.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="card">
+      <form>
+        <input type="text" placeholder="city" data-input="" />
+        <button type="submit" id="btn" data-form-btn>
+          <i class="fa-solid fa-magnifying-glass" style="color: #1e2a38"></i>
+        </button>
+      </form>
+      <div id="info-container">
+        <div id="img-container">
+          <img id="img" src="../src/Images/cloudy.png" data-img />
+        </div>
+        <h2 id="temp-c" data-temp-c><span>30°</span>C</h2>
+        <div>
+          <h1 class="city" data-city-name><span>New York</span>,</h1>
+          <h1 id="country"><span>USA</span></h1>
+        </div>
+
+        <div id="humidity-wind-container">
+          <div id="humidity-container">
+            <div class="image-container">
+              <img
+                src="../src/Images/humidity (1).png"
+                alt="thermostat for humidity"
+              />
+            </div>
+            <h2 class="humidity" data-humidity><span>10%</span>Humdity</h2>
+          </div>
+          <div id="windspeed-container">
+            <div class="image-container">
+              <img src="../src/Images/wind.png" alt="wind breeze" />
+            </div>
+            <h2 id="wind_kph" data-wind-kph><span>10 km/h</span>Windspeed </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
