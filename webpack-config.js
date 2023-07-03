@@ -1,7 +1,8 @@
 const path = require("path");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 module.exports = {
-  mode: 'development',
+  mode: 'production',
     entry: './src/index.js',
     output: {
       filename: 'main.js',
@@ -20,6 +21,15 @@ module.exports = {
      ],
    },
    plugins: [
-    new Dotenv()
+    new Dotenv(),
+    
+    new HtmlWebpackPlugin({
+      title: "Weather App",
+      filename: "index.html",
+      template: "src/template.html",
+      favicon: './src/Images/cloudy.png'
+    }),
+    
+    
   ]
   };
