@@ -6,15 +6,21 @@
   color: white;
   margin: 0;
   padding: 0;
+  text-shadow: 1px 0px 40px #6d6a6a;
 }
 
 .card {
-  background: grey;
+  position: relative;
+  top: 25%;
   width: auto;
-  height: auto;
-  border-radius: 20px;
+  height: 100vh;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
   padding: 30px 20px;
+   background-image: linear-gradient(to right top, #6bc5d1, #66cfcb, #6ed7c0, #81deb0, #9de39e, #aee391, #c1e384, #d5e179, #dedc70, #e8d669, #f2d063, #fbca5f); 
+
 }
+
+
 .card form {
   display: flex;
   flex-direction: row;
@@ -22,7 +28,7 @@
   justify-content: center;
 }
 .card input {
-  width: 80%;
+  width: 30%;
   height: 60px;
   border-radius: 15px;
   border: none;
@@ -30,6 +36,9 @@
   padding: 0 20px 0 20px;
   border: none;
   color: black;
+  margin-bottom: 45px;
+  text-shadow: none;
+  transition: background-image 10s ease;
 }
 #btn {
   width: 60px;
@@ -40,10 +49,7 @@
 #btn i {
   font-size: 1.7rem;
 }
-body {
-  display: grid;
-  place-items: center;
-}
+
 #img-container {
   margin-top: 40px;
   width: 150px;
@@ -53,6 +59,8 @@ img {
   object-fit: cover;
   width: 100%;
   height: 100%;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 22px 70px 4px;
+  padding: 10px
 }
 
 #info-container {
@@ -62,6 +70,7 @@ img {
 
   align-items: center;
   width: 100%;
+  
 }
 #info-container div {
   display: flex;
@@ -76,7 +85,7 @@ img {
 }
 #temp-c {
   margin: 40px 0 20px 0;
-  font-size: 3.2rem;
+  font-size: 3.4rem;
 
 }
 
@@ -103,13 +112,15 @@ img {
   flex-direction: row;;
   flex-wrap: nowrap;
   justify-content: center;
-  gap: 50px
+  gap: 30px;
+  margin-top: 20px;
+  
 }
 #humidity-wind-container #humidity-container, #humidity-wind-container #windspeed-container{
 display: flex;
 flex-direction: row;
-gap: 15px
-
+gap: 15px;
+text-align: left
 }
 
 #humidity-wind-container #humidity-container span, #windspeed-container span {
@@ -120,6 +131,15 @@ gap: 15px
 }
 
 #humidity-container h2, #windspeed-container h2 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 100;
+}
+
+.lightBackground {
+  background-image: linear-gradient(to right top, #6bc5d1, #66cfcb, #6ed7c0, #81deb0, #9de39e, #aee391, #c1e384, #d5e179, #dedc70, #e8d669, #f2d063, #fbca5f) !important; 
+  
+}
+.darkBackground {
+
+  background-image: linear-gradient(to right top, #021517, #05282f, #003b4a, #004f69, #03638a, #01688e, #006e92, #007396, #00697b, #005e60, #185247, #244533) !important;
 }
