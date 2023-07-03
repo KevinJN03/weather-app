@@ -4,8 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%=htmlWebpackPlugin.options.title%></title>
-    <link type="image/x-icon" href="<%=htmlWebpackPlugin.options.favicon%>">
-   
+
     <script
       src="https://kit.fontawesome.com/8de37b55b8.js"
       crossorigin="anonymous"
@@ -22,7 +21,7 @@
       </form>
       <div id="info-container">
         <div id="img-container">
-          <img id="img" src="../src/Images/cloudy.png" data-img />
+          <img id="img" src="" data-img />
         </div>
         <h2 id="temp-c" data-temp-c><span></span>C</h2>
         <div>
@@ -34,7 +33,7 @@
           <div id="humidity-container">
             <div class="image-container">
               <img
-                src="../src/Images/humidity.png"
+                src="<%=htmlWebpackPlugin.options.humidity%>"
                 alt="thermostat for humidity"
               />
             </div>
@@ -42,7 +41,10 @@
           </div>
           <div id="windspeed-container">
             <div class="image-container">
-              <img src="../src/Images/wind.png" alt="wind breeze" />
+              <img
+                src="<%=htmlWebpackPlugin.options.wind%>"
+                alt="wind breeze"
+              />
             </div>
             <h2 id="wind_kph" data-wind-kph><span></span>Windspeed</h2>
           </div>

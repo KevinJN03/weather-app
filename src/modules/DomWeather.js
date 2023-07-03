@@ -5,10 +5,9 @@ import snow from "../Images/snow.png";
 import sun from "../Images/sun.png";
 import foggy from "../Images/foggy.png";
 import sleet from "../Images/sleet.png";
-import overcast from "../Images/overcast.png"
+import overcast from "../Images/overcast.png";
 export default function domWeather(data) {
-  console.log("this is the data: ", data);
-  const card = document.querySelector(".card")
+  const card = document.querySelector(".card");
   let image = document.querySelector("[data-img]");
   let cityName = document.querySelector("[data-city-name] span");
   let country = document.querySelector("#country span");
@@ -24,54 +23,51 @@ export default function domWeather(data) {
 
   async function changeImg() {
     let text = await data.text.toLowerCase();
-    console.log("image.src: ", image);
-    console.log(text);
 
     if (text.includes("cloudy")) {
       image.setAttribute("src", cloudy);
-      if(card.classList.contains("darkBackground")) card.classList.remove("darkBackground")
-      card.classList.add("lightBackground")
-    }
-    else if (text.includes("rain")) {
-      if(card.classList.contains("lightBackground")) card.classList.remove("lightBackground")
-      card.classList.add("darkBackground")
+      if (card.classList.contains("darkBackground"))
+        card.classList.remove("darkBackground");
+      card.classList.add("lightBackground");
+    } else if (text.includes("rain")) {
+      if (card.classList.contains("lightBackground"))
+        card.classList.remove("lightBackground");
+      card.classList.add("darkBackground");
       image.setAttribute("src", rain);
-    }
-
-    else if (text.includes("snow") || text.includes("ice") ) {
-      if(card.classList.contains("lightBackground")) card.classList.remove("lightBackground")
-      card.classList.add("darkBackground")
+    } else if (text.includes("snow") || text.includes("ice")) {
+      if (card.classList.contains("lightBackground"))
+        card.classList.remove("lightBackground");
+      card.classList.add("darkBackground");
       image.setAttribute("src", snow);
-    }
-
-    else if (text.includes("storm") || text.includes("thunder")) {
-      if(card.classList.contains("lightBackground")) card.classList.remove("lightBackground")
-      card.classList.add("darkBackground")
+    } else if (text.includes("storm") || text.includes("thunder")) {
+      if (card.classList.contains("lightBackground"))
+        card.classList.remove("lightBackground");
+      card.classList.add("darkBackground");
       image.setAttribute("src", storm);
-    }
-    else if (text.includes("sun")) {
-      if(card.classList.contains("darkBackground")) card.classList.remove("darkBackground")
-      card.classList.add("lightBackground")
+    } else if (text.includes("sun")) {
+      if (card.classList.contains("darkBackground"))
+        card.classList.remove("darkBackground");
+      card.classList.add("lightBackground");
       image.setAttribute("src", sun);
-    } 
-    else if(text.includes("fog") || text.includes("mist")){
-      if(card.classList.contains("lightBackground")) card.classList.remove("lightBackground")
-      card.classList.add("darkBackground")
+    } else if (text.includes("fog") || text.includes("mist")) {
+      if (card.classList.contains("lightBackground"))
+        card.classList.remove("lightBackground");
+      card.classList.add("darkBackground");
       image.setAttribute("src", foggy);
-    }
-    else if(text.includes("sleet")){
-      if(card.classList.contains("lightBackground")) card.classList.remove("lightBackground")
-      card.classList.add("darkBackground")
-      image.setAttribute("src", sleet)
-    }
-    else if(text.includes("overcast")){
-      if(card.classList.contains("lightBackground")) card.classList.remove("lightBackground")
-      card.classList.add("darkBackground")
-      image.setAttribute("src", overcast)
-    }
-    else {
-      if(card.classList.contains("darkBackground")) card.classList.remove("darkBackground")
-      card.classList.add("lightBackground")
+    } else if (text.includes("sleet")) {
+      if (card.classList.contains("lightBackground"))
+        card.classList.remove("lightBackground");
+      card.classList.add("darkBackground");
+      image.setAttribute("src", sleet);
+    } else if (text.includes("overcast")) {
+      if (card.classList.contains("lightBackground"))
+        card.classList.remove("lightBackground");
+      card.classList.add("darkBackground");
+      image.setAttribute("src", overcast);
+    } else {
+      if (card.classList.contains("darkBackground"))
+        card.classList.remove("darkBackground");
+      card.classList.add("lightBackground");
       image.setAttribute("src", cloudy);
     }
   }
