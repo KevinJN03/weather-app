@@ -1,10 +1,15 @@
 import Weather from "./modules/weather"
 import domWeather from "./modules/DomWeather"
 import "./style.css"
+import wind from "./Images/wind.png";
+import humidity from "./Images/humidity.png";
+let humidityImage = document.querySelector("#humidityImg")
+let windImage = document.querySelector("#windImg")
 let input = document.querySelector("[data-input]")
 let submitBtn = document.querySelector("[data-form-btn]")
-// import "./Images/wind.png";
-// import "./Images/humidity.png";
+
+humidityImage.src = humidity
+windImage.src = wind
 startUp()
 submitBtn.addEventListener("click", async (e) => {
     e.preventDefault()
