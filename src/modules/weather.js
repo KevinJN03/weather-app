@@ -26,7 +26,7 @@ export default async function Weather(input){
     let response = await fetch(baseUrl+API_KEY+`&q=${input}`,{
         mode: 'cors'
     })
-    if(response.status != 200) alert("input is wrong")
+    if(response.status != 200) alert (new Error(`${input} Location not found`))
    let data= await response.json()
     return getData(data)
 
